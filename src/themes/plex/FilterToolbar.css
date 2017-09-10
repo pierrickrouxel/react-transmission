@@ -1,0 +1,61 @@
+.toolbar {
+  display: flex;
+  padding: 0 25px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, .15);
+  color: hsla(0, 0%, 100%, .7);
+  font-size: 15px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+.filters {
+  flex: 1;
+  overflow-x: hidden;
+}
+
+.filters * {
+  outline: none;
+  margin-left: 10px;
+}
+
+.filters input {
+  padding: 5px 10px;
+  background-color: hsla(0, 0%, 100%, .25);
+  color: #eee;
+  transition: background-color .2s;
+  border: 0;
+  border-radius: 4px;
+  font-family: Open Sans Semibold, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.filters input:focus {
+  background-color: #eee;
+  color: #555;
+}
+
+.stats {
+  float: right;
+}
+
+.stats span {
+  margin-left: 10px;
+}
+
+.stats div {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 11px;
+  height: 11px;
+  opacity: .6;
+  margin-right: 2px;
+}
+
+.upImage {
+  background-image: url(./images/caret-up.svg);
+}
+
+.downImage {
+  background-image: url(./images/caret-down.svg);
+}

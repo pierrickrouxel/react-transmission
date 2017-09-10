@@ -1,0 +1,29 @@
+.progressBar {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.progressBar progress {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  flex: 1;
+  height: 5px;
+}
+
+.paused progress::-webkit-progress-value {
+  background-color: #999;
+}
+
+.leeching progress::-webkit-progress-value {
+  background-color: #b56d16;
+}
+
+.seeding progress::-webkit-progress-value {
+  background-color: #6b5;
+}
+
+.magnet progress::-webkit-progress-value {
+  background-color: #ac3323;
+}

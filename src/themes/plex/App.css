@@ -1,0 +1,59 @@
+@import "normalize.css";
+
+.background {
+  background-image: url(./images/noise.png), url(./images/preset-light.png);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: center, center;
+}
+
+.body {
+  font-family: Open Sans Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #eee;
+}
+
+.body :global .react-tabs__tab-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.body :global .react-tabs__tab {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #999;
+  font-weight: 400;
+  outline: none;
+  cursor: pointer;
+}
+
+.body :global .react-tabs__tab--selected {
+  color: #f9be03;
+}
+
+.container {
+  composes: background;
+  composes: body;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.details {
+  width: 450px;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, .3);
+}

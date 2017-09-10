@@ -1,0 +1,36 @@
+.statusButton {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  outline: none;
+  margin-left: 10px;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 10px;
+  line-height: 24px;
+  transition: all .2s;
+  opacity: .7;
+  float: right;
+}
+
+.statusButton:hover {
+  background-color: #cc7b19;
+  border-color: #cc7b19;
+  opacity: 1;
+}
+
+.statusPause {
+  composes: statusButton;
+
+  background: url(./images/pause.svg) center no-repeat;
+  background-size: 8px;
+}
+
+.statusResume {
+  composes: statusButton;
+
+  background: url(./images/play.svg) 7px center no-repeat;
+  background-size: 8px;
+}

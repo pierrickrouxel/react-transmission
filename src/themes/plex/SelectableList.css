@@ -1,0 +1,23 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  padding: 5px 15px;
+  cursor: pointer;
+  outline: none;
+}
+
+.row.even {
+  background-color: hsla(0, 0%, 100%, .02);
+}
+
+.row:hover {
+  background-color: hsla(0, 0%, 100%, .06);
+}
+
+.row.selected {
+  background-color: hsla(0, 0%, 100%, .06);
+}

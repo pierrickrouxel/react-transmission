@@ -1,0 +1,66 @@
+.toolbar {
+  display: flex;
+  padding: 0 25px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, .15);
+  color: hsla(0, 0%, 100%, .7);
+  font-size: 15px;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  padding-right: 25px;
+}
+
+.image {
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+}
+
+.button:hover .image {
+  opacity: 1;
+}
+
+.settingsImage {
+  composes: image;
+  background-image: url(./images/cog.svg);
+}
+
+.preferencesImage {
+  composes: image;
+  background-image: url(./images/wrench.svg);
+}
+
+.turtleImage {
+  composes: image;
+  background-image: url(./images/turtle.svg);
+}
+
+.button.active .turtleImage {
+  background-image: url(./images/turtle-inverted.svg);
+  opacity: 1;
+}
+
+.button.active:hover .turtleImage {
+  background-image: url(./images/turtle.svg);
+}
+
+.compactImage {
+  composes: image;
+  background-image: url(./images/list.svg);
+}
+
+.button.active .compactImage {
+  background-image: url(./images/list-inverted.svg);
+  opacity: 1;
+}
+
+.button.active:hover .compactImage {
+  background-image: url(./images/list.svg);
+}

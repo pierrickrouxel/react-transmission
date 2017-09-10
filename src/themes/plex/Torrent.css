@@ -1,0 +1,25 @@
+.torrentCompact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nameCompact {
+  flex: 1;
+}
+
+.progressBarRowCompact {
+  margin-left: 10px;
+}
+
+.peerDetails {
+  opacity: .6;
+}
+
+.progressBarRow {
+  display: flex;
+}
+
+.progressDetails {
+  opacity: .6;
+}

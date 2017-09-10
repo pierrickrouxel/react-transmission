@@ -1,0 +1,22 @@
+.inspector {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.infoImage::after {
+  content: 'Info';
+}
+
+.peersImage::after {
+  content: 'Peers';
+}
+
+.trackersImage::after {
+  content: 'Trackers';
+}
+
+.filesImage::after {
+  content: 'Files';
+}

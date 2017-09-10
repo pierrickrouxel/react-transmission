@@ -1,0 +1,74 @@
+.backdrop {
+  composes: background from "./App.css";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.dialog {
+  composes: body from "./App.css";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: none;
+  overflow-y: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 55px;
+  padding-bottom: 25px;
+}
+
+.dialog::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.dialog :global .react-tabs__tab-list {
+  text-align: right;
+}
+
+.close {
+  position: fixed;
+  top: 0;
+  left: 20px;
+  background: none;
+  border: none;
+  background-image: url(./images/chevron-left.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 24px;
+  height: 60px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.title {
+  position: absolute;
+  top: 48px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.dialog h3 {
+  background-color: rgba(0, 0, 0, .15);
+  margin-top: 25px;
+  padding: 13px 20px;
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #999;
+}

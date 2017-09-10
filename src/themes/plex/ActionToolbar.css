@@ -1,0 +1,71 @@
+.toolbar {
+  z-index: 1000;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, .7);
+  padding: 0 10px;
+}
+
+.separator {
+  display: inline-block;
+  width: 30px;
+}
+
+.button {
+  cursor: pointer;
+  height: 60px;
+  border: none;
+  background: none;
+  padding: 0 10px;
+  opacity: 0.6;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.inspector {
+  float: right;
+}
+
+.image {
+  height: 24px;
+  width: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.openImage {
+  composes: image;
+  background-image: url(./images/folder-open.svg);
+}
+
+.removeImage {
+  composes: image;
+  background-image: url(./images/ban.svg);
+}
+
+.startImage {
+  composes: image;
+  background-image: url(./images/play.svg);
+}
+
+.pauseImage {
+  composes: image;
+  background-image: url(./images/pause.svg);
+}
+
+.startAllImage {
+  composes: image;
+  background-image: url(./images/play-circle.svg);
+}
+
+.pauseAllImage {
+  composes: image;
+  background-image: url(./images/pause-circle.svg);
+}
+
+.inspectorImage {
+  composes: image;
+  background-image: url(./images/info.svg);
+}
