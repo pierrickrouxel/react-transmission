@@ -1,4 +1,67 @@
-.contextMenuOuter {
-  composes: body from "./App.css";
+.menuOuter {
   position: absolute;
+  font-size: 13px;
+  font-family: Open Sans Semibold, Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 1.71428571;
+  color: hsla(0, 0%, 100%, .7);
+  padding: 8px 0;
+  border-radius: 4px;
+  background-color: #191a1c;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .35);
+  width: 180px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  padding: 4px 20px;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  color: #fff;
+  background-color: hsla(0, 0%, 100%, .08);
+}
+
+.menuItem a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menuSeparator {
+  height: 1px;
+  margin: 5px;
+  overflow: hidden;
+  background-color: hsla(0, 0%, 78%, .15);
+}
+
+.menuSubitem {
+  composes: menuItem;
+}
+
+.menuSubitem:after {
+  content: '►';
+  float: right;
+}
+
+.menuSelected {
+  composes: menuItem;
+  position: relative;
+}
+
+.menuSelected:before {
+  content: "✔";
+  position: absolute;
+  left: 5px;
+}
+
+.menuOpen {
+  composes: menuSubitem;
+  background-color: hsla(0, 0%, 100%, .08);
 }

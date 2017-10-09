@@ -26,7 +26,7 @@ class AboutDialog extends Component {
         <div className={theme.body}>
           <div className={theme.content}>
             <div className={theme.logo}>
-              <img src={logoImage} alt='logo' />
+              <img src={logoImage} alt='Logo' />
             </div>
 
             <h3>Transmission {this.props.session_store.settings.version}</h3>

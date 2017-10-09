@@ -6,7 +6,7 @@ import autobind from 'autobind-decorator';
 import ContextMenu from 'components/menus/ContextMenu';
 
 @inject('view_store', 'torrents_store')
-@themr('SortByContextMenu')
+@themr('ContextMenu')
 class SortByContextMenu extends Component {
   @autobind onToggleSortByContextMenu() {
     this.props.view_store.toggleSortByContextMenu();
@@ -43,17 +43,17 @@ class SortByContextMenu extends Component {
         onHide={this.props.onHide}
       >
         <ul
-          className={theme.torrentMenu}
+          className={theme.menu}
           onClick={this.onToggleContextMenu}
           onMouseEnter={this.onToggleSortByContextMenu}
           onMouseLeave={this.onToggleSortByContextMenu}
         >
           {Object.keys(criteriaList).map((key) => (
-            <li key={key} className={sortCriteria === key ? theme.torrentMenuSelected : theme.torrentMenuItem} onClick={() => this.onSetSortCriteria(key)}>{criteriaList[key]}</li>
+            <li key={key} className={sortCriteria === key ? theme.menuSelected : theme.menuItem} onClick={() => this.onSetSortCriteria(key)}>{criteriaList[key]}</li>
           ))}
 
-          <li className={theme.torrentMenuSeparator} />
-          <li className={sortDirection === 'ascending' ? theme.torrentMenuSelected : theme.torrentMenuItem}>Reverse Sort Order</li>
+          <li className={theme.menuSeparator} />
+          <li className={sortDirection === 'ascending' ? theme.menuSelected : theme.menuItem}>Reverse Sort Order</li>
         </ul>
       </ContextMenu>
     );

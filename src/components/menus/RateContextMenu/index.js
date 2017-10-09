@@ -6,7 +6,7 @@ import autobind from 'autobind-decorator';
 import ContextMenu from 'components/menus/ContextMenu';
 
 @inject('view_store', 'session_store')
-@themr('RateContextMenu')
+@themr('ContextMenu')
 class RateContextMenu extends Component {
   @autobind onToggleRateContextMenu() {
     // FIXME
@@ -56,16 +56,16 @@ class RateContextMenu extends Component {
         onHide={this.props.onHide}
       >
         <ul
-          className={theme.torrentMenu}
+          className={theme.menu}
           onClick={this.onToggleContextMenu}
           onMouseEnter={this.onToggleRateContextMenu}
           onMouseLeave={this.onToggleRateContextMenu}
         >
-          <li className={!enabled ? theme.torrentMenuSelected : theme.torrentMenuItem} onClick={() => this.onSetRateLimit(0)}>Unlimited</li>
-          <li className={enabled ? theme.torrentMenuSelected : theme.torrentMenuItem}>Limit ({rateList[`${rateLimit}`]})</li>
-          <li className={theme.torrentMenuSeparator} />
+          <li className={!enabled ? theme.menuSelected : theme.menuItem} onClick={() => this.onSetRateLimit(0)}>Unlimited</li>
+          <li className={enabled ? theme.menuSelected : theme.menuItem}>Limit ({rateList[`${rateLimit}`]})</li>
+          <li className={theme.menuSeparator} />
           {Object.keys(rateList).map((key) => (
-            <li key={key} className={theme.torrentMenuItem} onClick={() => this.onSetRateLimit(+key)}>{rateList[key]}</li>
+            <li key={key} className={theme.menuItem} onClick={() => this.onSetRateLimit(+key)}>{rateList[key]}</li>
           ))}
 
         </ul>

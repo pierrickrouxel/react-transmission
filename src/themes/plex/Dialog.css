@@ -16,8 +16,8 @@
   bottom: 0;
   outline: none;
   overflow-y: auto;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 110px;
+  padding-right: 110px;
   padding-top: 55px;
   padding-bottom: 25px;
 }
@@ -61,11 +61,12 @@
   top: 48px;
   font-size: 24px;
   font-weight: 400;
+  padding: 0 20px;
 }
 
 .dialog h3 {
   background-color: rgba(0, 0, 0, .15);
-  margin-top: 25px;
+  margin: 0;
   padding: 13px 20px;
   line-height: 22px;
   font-size: 14px;

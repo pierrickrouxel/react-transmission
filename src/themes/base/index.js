@@ -19,10 +19,6 @@ import OpenDialog from './OpenDialog.css';
 import DropzoneLayer from './DropzoneLayer.css';
 import Trackers from './Trackers.css';
 import ContextMenu from './ContextMenu.css';
-import RateContextMenu from './RateContextMenu.css';
-import SettingsContextMenu from './SettingsContextMenu.css';
-import SortByContextMenu from './SortByContextMenu.css';
-import TorrentContextMenu from './TorrentContextMenu.css';
 
 export default {
   App,
@@ -46,8 +42,4 @@ export default {
   DropzoneLayer,
   Trackers,
   ContextMenu,
-  RateContextMenu,
-  SettingsContextMenu,
-  SortByContextMenu,
-  TorrentContextMenu,
 };

@@ -1,0 +1,29 @@
+.logo {
+  text-align: right;
+}
+
+.buttons button {
+  font-family: Open Sans Bold, Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.33;
+  padding: 10px 18px;
+  border-radius: 3px;
+  border: 0;
+  color: #fff;
+  background-color: #cc7b19;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #e59029;
+}
+
+.buttons button:active {
+  background-color: #955a12;
+}
+
+.buttons button:first-child {
+  display: none;
+}

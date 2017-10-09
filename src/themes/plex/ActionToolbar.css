@@ -1,8 +1,8 @@
 .toolbar {
   z-index: 1000;
-  font-size: 24px;
   background-color: rgba(0, 0, 0, .7);
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .separator {
@@ -15,7 +15,8 @@
   height: 60px;
   border: none;
   background: none;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   opacity: 0.6;
 }
 

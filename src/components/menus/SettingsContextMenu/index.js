@@ -9,7 +9,7 @@ import SortByContextMenu from 'components/menus/SortByContextMenu';
 import RateContextMenu from 'components/menus/RateContextMenu';
 
 @inject('view_store')
-@themr('SettingsContextMenu')
+@themr('ContextMenu')
 @observer
 class TorrentContextMenu extends Component {
   @autobind onAbout() {
@@ -47,25 +47,25 @@ class TorrentContextMenu extends Component {
         target={this.props.target}
         onHide={this.props.onHide}
       >
-        <ul className={theme.torrentMenu} onClick={this.onToggleContextMenu}>
-          <li className={theme.torrentMenuItem} onClick={this.onAbout}>About</li>
-          <li className={theme.torrentMenuSeparator} />
-          <li className={theme.torrentMenuItem}>
+        <ul className={theme.menu} onClick={this.onToggleContextMenu}>
+          <li className={theme.menuItem} onClick={this.onAbout}>About</li>
+          <li className={theme.menuSeparator} />
+          <li className={theme.menuItem}>
             <a href='http://transmissionbt.com/' target='_blank'>
               Transmission Home page
             </a>
           </li>
-          <li className={theme.torrentMenuItem}>
+          <li className={theme.menuItem}>
             <a href='http://transmissionbt.com/donate/' target='_blank'>
               Transmission Tip Jar
             </a>
           </li>
-          <li className={theme.torrentMenuSeparator} />
-          <li className={theme.torrentMenuItem} onClick={this.onStatistics}>Statistics</li>
-          <li className={theme.torrentMenuSeparator} />
+          <li className={theme.menuSeparator} />
+          <li className={theme.menuItem} onClick={this.onStatistics}>Statistics</li>
+          <li className={theme.menuSeparator} />
           <li
             ref='downloadRateTarget'
-            className={this.props.view_store.isDownloadRateContextMenuShown ? theme.torrentMenuSelected : theme.torrentMenuSubitem}
+            className={this.props.view_store.isDownloadRateContextMenuShown ? theme.menuOpen : theme.menuSubitem}
             onMouseEnter={this.onToggleDownloadRateContextMenu}
             onMouseLeave={this.onToggleDownloadRateContextMenu}
           >
@@ -80,7 +80,7 @@ class TorrentContextMenu extends Component {
           </li>
           <li
             ref='uploadRateTarget'
-            className={this.props.view_store.isUploadRateContextMenuShown ? theme.torrentMenuSelected : theme.torrentMenuSubitem}
+            className={this.props.view_store.isUploadRateContextMenuShown ? theme.menuOpen : theme.menuSubitem}
             onMouseEnter={this.onToggleUploadRateContextMenu}
             onMouseLeave={this.onToggleUploadRateContextMenu}
           >
@@ -93,10 +93,10 @@ class TorrentContextMenu extends Component {
               onHide={this.props.onHide}
             />
           </li>
-          <li className={theme.torrentMenuSeparator} />
+          <li className={theme.menuSeparator} />
           <li
             ref='sortByTarget'
-            className={this.props.view_store.isSortByContextMenuShown ? theme.torrentMenuSelected : theme.torrentMenuSubitem}
+            className={this.props.view_store.isSortByContextMenuShown ? theme.menuOpen : theme.menuSubitem}
             onMouseEnter={this.onToggleSortByContextMenu}
             onMouseLeave={this.onToggleSortByContextMenu}
           >

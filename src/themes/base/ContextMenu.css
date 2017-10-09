@@ -1,4 +1,73 @@
-.contextMenuOuter {
+.menuOuter {
   composes: body from "./App.css";
   position: absolute;
+}
+
+.menu {
+  bottom: 18px;
+  min-width: 210px;
+  background-color: white;
+  padding: 5px 0;
+  text-align: left;
+  list-style: none;
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.menuItem {
+  margin: 0px;
+  color: rgb(0, 0, 0);
+  cursor: default;
+  padding: 3px 10px 3px 20px;
+}
+
+.menuSubitem {
+  composes: menuItem;
+}
+
+.menuSubitem:after {
+  content: "►";
+  float: right;
+}
+
+.menuSelected {
+  composes: menuItem;
+}
+
+.menuSelected:before {
+  content: "✔";
+  margin-left: -14px;
+  margin-right: 6px;
+}
+
+.menuOpen {
+  composes: menuSubitem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(34, 68, 238);
+}
+
+.menuItem:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(34, 68, 238);
+}
+
+.menuSeparator {
+  composes: menuItem;
+
+  border-top: 1px solid #ddd;
+  margin: 5px 0;
+  padding: 0px;
+}
+
+.menuItem a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.menuItem a:visited {
+  color: rgb(0, 0, 0);
+}
+
+.menuItem:hover a {
+  color: rgb(255, 255, 255);
 }

@@ -12,6 +12,8 @@ import App from 'components/App';
 
 import themes from './themes';
 
+require('typeface-open-sans');
+
 // Start reactions
 notify(stores);
 

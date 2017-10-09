@@ -6,7 +6,7 @@ import autobind from 'autobind-decorator';
 import ContextMenu from 'components/menus/ContextMenu';
 
 @inject('view_store', 'torrents_store')
-@themr('TorrentContextMenu')
+@themr('ContextMenu')
 class TorrentContextMenu extends Component {
   @autobind pause() {
     this.props.torrents_store.stop(this.props.view_store.selectedTorrents);
@@ -80,7 +80,7 @@ class TorrentContextMenu extends Component {
   render() {
     const { theme } = this.props;
     const selectedTorrents = this.props.view_store.selectedTorrents;
-    const noMultiple = selectedTorrents.length > 1 ? theme.torrentMenuItemDisabled : theme.torrentMenuItem;
+    const noMultiple = selectedTorrents.length > 1 ? theme.menuItemDisabled : theme.menuItem;
 
     return (
       <ContextMenu
@@ -89,27 +89,27 @@ class TorrentContextMenu extends Component {
         target={this.props.target}
         onHide={this.props.onHide}
       >
-        <ul className={theme.torrentMenu} onClick={this.onToggleContextMenu}>
-          <li className={theme.torrentMenuItem} onClick={this.pause}>Pause</li>
-          <li className={theme.torrentMenuItem} onClick={this.resume}>Resume</li>
-          <li className={theme.torrentMenuItem} onClick={this.resumeNow}>Resume Now</li>
-          <li className={theme.torrentMenuSeparator} />
-          <li className={theme.torrentMenuItem} onClick={this.queueMoveTop}>Move to Top</li>
-          <li className={theme.torrentMenuItem} onClick={this.queueMoveUp}>Move Up</li>
-          <li className={theme.torrentMenuItem} onClick={this.queueMoveDown}>Move Down</li>
-          <li className={theme.torrentMenuItem} onClick={this.queueMoveBottom}>Move to Bottom</li>
-          <li className={theme.torrentMenuSeparator} />
-          <li className={theme.torrentMenuItem} onClick={this.remove}>Remove From List...</li>
-          <li className={theme.torrentMenuItem} onClick={this.trashAndRemove}>Trash Data & Remove From List...</li>
-          <li className={theme.torrentMenuSeparator} />
-          <li className={theme.torrentMenuItem} onClick={this.verify}>Verify Local Data</li>
+        <ul className={theme.menu} onClick={this.onToggleContextMenu}>
+          <li className={theme.menuItem} onClick={this.pause}>Pause</li>
+          <li className={theme.menuItem} onClick={this.resume}>Resume</li>
+          <li className={theme.menuItem} onClick={this.resumeNow}>Resume Now</li>
+          <li className={theme.menuSeparator} />
+          <li className={theme.menuItem} onClick={this.queueMoveTop}>Move to Top</li>
+          <li className={theme.menuItem} onClick={this.queueMoveUp}>Move Up</li>
+          <li className={theme.menuItem} onClick={this.queueMoveDown}>Move Down</li>
+          <li className={theme.menuItem} onClick={this.queueMoveBottom}>Move to Bottom</li>
+          <li className={theme.menuSeparator} />
+          <li className={theme.menuItem} onClick={this.remove}>Remove From List...</li>
+          <li className={theme.menuItem} onClick={this.trashAndRemove}>Trash Data & Remove From List...</li>
+          <li className={theme.menuSeparator} />
+          <li className={theme.menuItem} onClick={this.verify}>Verify Local Data</li>
           <li className={noMultiple} onClick={this.setLocation} >Set Location...</li>
           <li className={noMultiple} onClick={this.rename}>Rename...</li>
-          <li className={theme.torrentMenuSeparator} />
-          <li className={theme.torrentMenuItem} onClick={this.askTrackerMorePeers}>Ask tracker for more peers</li>
-          <li className={theme.torrentMenuSeparator} />
-          <li className={theme.torrentMenuItem} onClick={this.onSelectAll}>Select All</li>
-          <li className={theme.torrentMenuItem} onClick={this.onDeselectAll}>Deselect All</li>
+          <li className={theme.menuSeparator} />
+          <li className={theme.menuItem} onClick={this.askTrackerMorePeers}>Ask tracker for more peers</li>
+          <li className={theme.menuSeparator} />
+          <li className={theme.menuItem} onClick={this.onSelectAll}>Select All</li>
+          <li className={theme.menuItem} onClick={this.onDeselectAll}>Deselect All</li>
         </ul>
       </ContextMenu>
     );

@@ -1,4 +1,11 @@
-@import "normalize.css";
+@import 'normalize.css';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 
 .background {
   background-image: url(./images/noise.png), url(./images/preset-light.png);
@@ -31,6 +38,10 @@
 
 .body :global .react-tabs__tab--selected {
   color: #f9be03;
+}
+
+.body button {
+  outline: none;
 }
 
 .container {

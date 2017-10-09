@@ -80,7 +80,8 @@
     "react-dom": "^15.4.2",
     "react-dropzone": "^3.8.0",
     "react-overlays": "0.6.10",
-    "react-tabs": "1.1.0"
+    "react-tabs": "1.1.0",
+    "typeface-open-sans": "^0.0.35"
   },
   "scripts": {
     "start": "node scripts/start.js",
